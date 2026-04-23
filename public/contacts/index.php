@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+<?php
+$head ='
 	<meta charset="utf-8">
 	<title>Изучаем PHP</title>
-	<link rel="stylesheet" href="assets/css/style.css">
-</head>
+	<link rel="stylesheet" href="../assets/css/style.css">
+';
 
-<body>
-	<header>
-		<div class="content">
+$header = '
+		<div class="content ins">
 			<div class="logo">
-				<img src="assets/logo.png" alt="logo">
+				<img src="../assets/logo.png" alt="logo">
 				<a href="/">
 					<h3>Музыкальный сервис</h3>
 				</a>
 			</div>
 			<nav>
-				<a href="/teams/index.html">Группы</a> |
+				<a href="/teams">Группы</a> |
 				<a href="/albums">Альбомы</a> |
 				<a href="/tracks">Треки</a> |
 				<a href="/admin">Консоль</a>
 			</nav>
 		</div>
-	</header>
-
-	<div class="main">
-		<div class="content">
-
-<!-- контент -->
-<h1>SILENCE.NET</h1>
-<h3>Музыка – это тишина, которая живёт между звуками</h3>
-<h4>(В.А. Моцарт)</h4>
-<h3>Найди свою тишину</h3>
-<input type="button" value="Поиск в базе">
-
-		</div>
-	</div>
-
-	<footer>
+';
+			
+$content = '
+<h1>Контакты</h1>
+<h3>vk: https://vk.com/proger</h3>
+<h3>e-mail: developer@mail.ru</h3>
+<h3>phone: 8(666)888-77-77</h3>          
+';			
+	
+$footer = '
 		<div class="content">
 			<div class="block">
 				<div class="logo">
@@ -62,7 +56,22 @@
 				</div>
 			</div>
 		</div>
-	</footer>
 </body>
+';
+?>
 
+<head>
+    <?php echo $head; ?>
+</head>
+<body>
+    <?php echo $header; ?>
+
+    <div class="main">
+        <div class="content">
+            <?php echo $content; ?>
+        </div>
+    </div>
+
+    <?php echo $footer; ?>
+</body>
 </html>

@@ -1,60 +1,41 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+<?php
+$head = '
 	<meta charset="utf-8">
 	<title>Изучаем PHP</title>
-	<link rel="stylesheet" href="../assets/css/style.css">
-</head>
+	<link rel="stylesheet" href="assets/css/style.css">
+';
 
-<body>
-	<header>
-		<div class="content ins">
+$headerContent = '
+	<div class="content">
 			<div class="logo">
-				<img src="../assets/logo.png" alt="logo">
+				<img src="assets/logo.png" alt="logo">
 				<a href="/">
 					<h3>Музыкальный сервис</h3>
 				</a>
 			</div>
 			<nav>
-				<a href="/teams">Группы</a> |
+				<a href="/teams/index.html">Группы</a> |
 				<a href="/albums">Альбомы</a> |
 				<a href="/tracks">Треки</a> |
 				<a href="/admin">Консоль</a>
 			</nav>
 		</div>
-	</header>
+';
 
-	<div class="main ins">
-		<div class="content ins">
+$mainContent = '
+<div class="content">	
+	<h1>SILENCE.NET</h1>
+	<h3>Музыка – это тишина, которая живёт между звуками</h3>
+	<h4>(В.А. Моцарт)</h4>
+	<h3>Найди свою тишину</h3>
+	<input type="button" value="Поиск в базе">
+<div>
+';
 
-			<!-- контент -->
-<h1>Группы</h1>
-<div class="card">
- <img src="../assets/teams/acdc.jpg" class="teams_img">
- <div class="card_text">
- <h3>AC/DC</h3>
- <p>Страна: <b>Австралия</b></p>
- <p>Год основания: <b>1970</b></p>
- <p>Стиль группы: <b>Хард-блюз-рок</b></p>
- <span class="td_info">подробнее...</span>
- </div>
-</div>
-<div class="card">
- <img src="../assets/teams/aerosmith.jpg" class="teams_img">
- <div class="card_text">
- <h3>Aerosmith</h3>
- <p>Страна: <b>США</b></p>
- <p>Год основания: <b>1970</b></p>
- <p>Стиль группы: <b>Хард-рок</b></p>
- <span class="td_info">подробнее...</span>
- </div>
-</div>
-		
-		</div>
-	</div>
-
-		<footer>
+$footerContent = '
 		<div class="content">
 			<div class="block">
 				<div class="logo">
@@ -78,7 +59,23 @@
 				</div>
 			</div>
 		</div>
+';
+?>
+
+<head>
+	<?php echo $head; ?>
+</head>
+<body>
+	<header>
+		<?php echo $headerContent; ?>
+	</header>
+
+	<div class="main">
+			<?php echo $mainContent; ?>
+	</div>	
+
+	<footer>
+		<?php echo $footerContent; ?>
 	</footer>
 </body>
-
 </html>

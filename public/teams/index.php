@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+<?php
+$head = '
 	<meta charset="utf-8">
 	<title>Изучаем PHP</title>
 	<link rel="stylesheet" href="../assets/css/style.css">
-</head>
+';
 
-<body>
-	<header>
+$header = '
 		<div class="content ins">
 			<div class="logo">
 				<img src="../assets/logo.png" alt="logo">
@@ -23,21 +23,33 @@
 				<a href="/admin">Консоль</a>
 			</nav>
 		</div>
-	</header>
+';
 
-	<div class="main ins">
-		<div class="content ins">
-			
-	<!-- контент -->
-<h1>Контакты</h1>
-<h3>vk: https://vk.com/proger</h3>
-<h3>e-mail: developer@mail.ru</h3>
-<h3>phone: 8(666)888-77-77</h3>          
-			
-		</div>
-	</div>
-
-	<footer>
+$content = '		
+<h1>Группы</h1>
+<div class="card">
+ <img src="../assets/teams/acdc.jpg" class="teams_img">
+ <div class="card_text">
+ <h3>AC/DC</h3>
+ <p>Страна: <b>Австралия</b></p>
+ <p>Год основания: <b>1970</b></p>
+ <p>Стиль группы: <b>Хард-блюз-рок</b></p>
+ <span class="td_info">подробнее...</span>
+ </div>
+</div>
+<div class="card">
+ <img src="../assets/teams/aerosmith.jpg" class="teams_img">
+ <div class="card_text">
+ <h3>Aerosmith</h3>
+ <p>Страна: <b>США</b></p>
+ <p>Год основания: <b>1970</b></p>
+ <p>Стиль группы: <b>Хард-рок</b></p>
+ <span class="td_info">подробнее...</span>
+ </div>
+</div>
+';
+		
+$footer = '
 		<div class="content">
 			<div class="block">
 				<div class="logo">
@@ -61,7 +73,22 @@
 				</div>
 			</div>
 		</div>
+';
+?>
+<head>
+	<?php echo $head; ?>
+</head>
+<body>
+	<?php echo $header; ?>
+
+	<div class="main ins">
+		<div class="content ins">
+			<?php echo $content; ?>
+		</div>
+	</div>
+
+	<footer>
+		<?php echo $footer; ?>
 	</footer>
 </body>
-
 </html>

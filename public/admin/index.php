@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+<?php
+$head = '
 	<meta charset="utf-8">
 	<title>Изучаем PHP</title>
 	<link rel="stylesheet" href="../assets/css/style.css">
-</head>
+';
 
-<body>
-	<header>
+$header = '
 		<div class="content ins">
 			<div class="logo">
 				<img src="../assets/logo.png" alt="logo">
@@ -23,33 +23,18 @@
 				<a href="/admin">Консоль</a>
 			</nav>
 		</div>
-	</header>
-
+';
+$main = '
 	<div class="main ins">
 		<div class="content ins">
 			
-<!-- контент -->
-<h1>О нас</h1>
-<div>
- <img src="../assets/about/bat.jpg" alt="">
- <img src="../assets/about/flu.jpg" alt="">
-</div>
-<div>
- <p>Тьма, пришедшая со Средиземного моря, накрыла ненавидимый прокуратором 
-город. Исчезли висячие мосты, соединяющие храм 
- со страшной Антониевой башней, опустилась с неба бездна и залила крылатых 
-богов над гипподромом, Хасмонейский дворец с 
- бойницами, базары, караван-сараи, переулки, пруды...</p>
- 
- <p>Пропал Ершалаим - великий город, как будто не существовал на 
-свете.</p>
-</div>       
+			<h1>Консоль</h1>
 
-			
 		</div>
 	</div>
+';
 
-	<footer>
+$footer = '
 		<div class="content">
 			<div class="block">
 				<div class="logo">
@@ -73,7 +58,16 @@
 				</div>
 			</div>
 		</div>
-	</footer>
 </body>
+';
+?>
 
+<head>
+	<?php echo $head; ?>
+</head>
+<body>
+	<?php echo $header; ?>
+	<?php echo $main; ?>
+	<?php echo $footer; ?>
+</body>
 </html>

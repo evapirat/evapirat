@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+<?php 
+$head = '
 	<meta charset="utf-8">
 	<title>Изучаем PHP</title>
 	<link rel="stylesheet" href="../assets/css/style.css">
-</head>
+';
 
-<body>
-	<header>
+
+$header = '
 		<div class="content ins">
 			<div class="logo">
 				<img src="../assets/logo.png" alt="logo">
@@ -23,12 +24,10 @@
 				<a href="/admin">Консоль</a>
 			</nav>
 		</div>
-	</header>
-
-	<div class="main ins">
-		<div class="content ins">
+';
 			
-	<!-- контент --> 
+
+$content = '
 <h1>Треки</h1>
 <table>
  <tr>
@@ -106,12 +105,10 @@
  </td>
  <td></td>
  </tr>
-</table>     
+</table>    
+';
 
-		</div>
-	</div>
-
-	<footer>
+$footer = '
 		<div class="content">
 			<div class="block">
 				<div class="logo">
@@ -135,7 +132,21 @@
 				</div>
 			</div>
 		</div>
-	</footer>
-</body>
+	</body>
+';
+?>
+<head>
+    <?php echo $head; ?>
+</head>
+<body>
+    <?php echo $header; ?>
 
+    <div class="main">
+        <div class="content">
+            <?php echo $content; ?>
+        </div>
+    </div>
+
+    <?php echo $footer; ?>
+</body>
 </html>
